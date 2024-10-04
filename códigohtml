@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatador de Boleto e validador de banco</title>
     <style>
-        /* Estilos CSS aqui */
+
+              /* Estilos CSS aqui */
         .container {
             /* max-width: 800px; */
             margin: 0 auto;
             padding: 20px;
+            font-size: 25px;
         }
 
         .result {
             font-size: 18px;
             margin-top: 10px;
-            font:bold;
+            font-weight: bold;
             font-size: 25px;
             
         }
@@ -33,11 +35,20 @@
 
         .input {
 
-            width: 500px;
-            height: 20px;
+            width: 580px;
+            height: 35px;
             font-style: bold;
-            font: bold;
+            font-weight: bold;
+            font-size: 20px;
+            /* background-color: blue;
+            color: white; */
         }
+
+        input::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+         font-weight: bold;
+         font-size: 20px;
+        /* color: white; */
+}
 
         .original {
 
@@ -54,7 +65,7 @@
 
         <b><p class="result" id="result"></p></b>
         <p><b>Código de barra</b></p>
-        <input id="barcode" class="input" placeholder="Cole o código de barras aqui"></input>
+        <input id="barcode" class="input" placeholder="Cole o código de barra aqui"></input>
         <p></p>
         <p><b>Original:</b> <span id="original"></span></p>
         <p></p>
@@ -408,6 +419,9 @@
             return banks[bankCode] || 'Banco não encontrado';
         }
     </script>
+</body>
+
+</html>
 </body>
 
 </html>
